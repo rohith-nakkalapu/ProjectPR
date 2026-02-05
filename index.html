@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dual-Use Emergency Response Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🚨 Dual-Use Emergency Response Platform</h1>
+  <p>Civilian-First | Disaster Response & Homeland Security</p>
+</header>
+
+<!-- STEP 1: INPUT / DECISION FLOW -->
+<section class="card">
+  <h2>Select Emergency Details</h2>
+
+  <select id="area">
+    <option value="">-- Select Area --</option>
+    <option value="AGIRIPALLI">AGIRIPALLI</option>
+    <option value="VIJAYAWADA">VIJAYAWADA</option>
+    <option value="GANNAVARAM">GANNAVARAM</option>
+    <option value="GUNTUR">GUNTUR</option>
+  </select>
+
+  <br><br>
+
+  <select id="emergencyType">
+    <option value="">-- Select Emergency Type --</option>
+    <option value="Flood">Flood</option>
+    <option value="Cyclone">Cyclone</option>
+    <option value="Earthquake">Earthquake</option>
+    <option value="Bomb Threat">Bomb Threat</option>
+    <option value="Suspicious Activity">Suspicious Activity</option>
+  </select>
+
+  <button onclick="processEmergency()">🚨 Generate Safety Guidance</button>
+</section>
+
+<!-- STEP 2A: SAFETY GUIDANCE -->
+<section class="card" id="guidanceCard" style="display:none;">
+  <h2>🛡️ Safety Guidance</h2>
+  <p id="decisionText"></p>
+  <p id="shelterText"></p>
+</section>
+
+<!-- STEP 2B: HELPLINES -->
+<section class="card" id="helplineCard" style="display:none;">
+  <h2>📞 Emergency Helpline Numbers</h2>
+  <ul id="helplineList"></ul>
+</section>
+
+<!-- STEP 3: MAP -->
+<section class="card">
+  <h2>🗺️ Live Safety Map</h2>
+  <iframe
+    id="mapFrame"
+    src=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
